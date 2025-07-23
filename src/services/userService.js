@@ -2,7 +2,7 @@ const pool = require('../config/db');
 
 const getAllUsersService = async () => {
   const result = await pool.query('SELECT name, email FROM users');
-  return result.rows; 
+  return result.rows;
 }
 
 const createUserService = async (name, email, password) => {
